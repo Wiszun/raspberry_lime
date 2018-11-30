@@ -1,0 +1,98 @@
+@media screen and (max-width: 992px) {
+  .burger {
+    display: inline-block;
+    position: fixed;
+    right: 50px;
+    top: 50px;
+    cursor: pointer;
+    z-index: 999;
+  }
+  #mainNavigation {
+    background-image: linear-gradient(to top, rgba(255,255,255,0.8), rgba(255,255,255,1));
+    min-height: 100vh;
+    height: 100%;
+    width: 240px;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+    z-index: 5;
+    ul {
+      text-align: left;
+      padding-top: 78px;
+      margin-top: 30px;
+      position: relative;
+      li {
+        display: block;
+        a {
+          padding: 10px 20px;
+          color: black;
+        }
+      }
+    }
+    .desktopLink {
+      display: none;
+    }
+    .mobileLink {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &.navActive {
+      transform: translateX(0);
+    }
+  }
+  section {
+    h1 {
+      font-size: 94px;
+    }
+  }
+  footer {
+    padding: 20px;
+    * {
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  section {
+    h1 {
+     font-size: 72px;
+     line-height: 1;
+   }
+  }
+  footer {
+    text-align: center;
+    display: block;
+    padding: 10px;
+    p {
+      text-align: center!important;
+    }
+    ul {
+      padding: 5px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .burger {
+    right: 25px;
+    top: 25px;
+  }
+  #form {
+    width: 300px;
+    height: 310px;
+    padding: 30px 0;
+    form {
+    margin: 40px 30px 0 30px;
+    text-align: center;
+    input[type="email"],
+    input[type="password"] {
+      margin-bottom: 20px;
+    }
+}
+  }
+  .button {
+    width: 230px;
+  }
+}
